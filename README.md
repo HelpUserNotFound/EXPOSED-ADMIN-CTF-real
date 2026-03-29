@@ -1,6 +1,58 @@
 # EXPOSED-ADMIN-CTF-real
-Read up on the capec 121 if you want a clue.
 
+# Exploit-Non-Production-Interfaces WALKTHROUGH (use at your own risk)
+CAPEC-121
+
+## Objective
+Exploit an exposed non-production admin interface that was unintentionally left accessible. This demonstrates **CAPEC-121: Exploit Non-Production Interfaces**.
+
+---
+
+# Getting it set up
+
+## Step 1 — Download the CTF
+
+Clone the repository from GitHub and unzip the files:
+
+```bash
+git clone https://github.com/BYU-ECE-Software/Cyber-266-Vulnerability-Walkthroughs/tree/main/Exploit-Non-Production-Interfaces
+cd exposed-admin-ctf
+```
+
+---
+
+## Step 2 — Start the Docker Environment
+
+From inside the project directory, build and start the containers:
+
+```bash
+docker compose up --build
+```
+
+Docker will:
+
+- Build the web container  
+- Build the admin container  
+- Install Flask  
+- Start both applications  
+
+You should see logs begin streaming in the terminal.
+
+---
+
+## Step 3 — Access the Target Website
+
+Open your browser and navigate to:
+
+```
+http://localhost:8000
+```
+
+This is the public-facing web application. We will now begin looking for additional exposed services.
+
+---
+
+Read up on the capec 121 if you want a clue: https://capec.mitre.org/data/definitions/121.html
 If not, more clues will be provided below:
 <br>
 <br>
@@ -70,57 +122,10 @@ Okay, you must be desprate...
 <br>
 <br>
 
-# Exploit-Non-Production-Interfaces WALKTHROUGH (use at your own risk)
-CAPEC-121
 
-## Objective
-Exploit an exposed non-production admin interface that was unintentionally left accessible. This demonstrates **CAPEC-121: Exploit Non-Production Interfaces**.
 
----
 
-## Step 1 — Download the CTF
-
-Clone the repository from GitHub and unzip the files:
-
-```bash
-git clone https://github.com/BYU-ECE-Software/Cyber-266-Vulnerability-Walkthroughs/tree/main/Exploit-Non-Production-Interfaces
-cd exposed-admin-ctf
-```
-
----
-
-## Step 2 — Start the Docker Environment
-
-From inside the project directory, build and start the containers:
-
-```bash
-docker compose up --build
-```
-
-Docker will:
-
-- Build the web container  
-- Build the admin container  
-- Install Flask  
-- Start both applications  
-
-You should see logs begin streaming in the terminal.
-
----
-
-## Step 3 — Access the Target Website
-
-Open your browser and navigate to:
-
-```
-http://localhost:8000
-```
-
-This is the public-facing web application. We will now begin looking for additional exposed services.
-
----
-
-## Step 4 — Scan for Open Ports Using Nmap
+## Clue 1 — Scan for Open Ports Using Nmap
 
 Install Nmap if needed.
 
@@ -164,7 +169,7 @@ You should now see an admin login page that was not intended to be public.
 
 ---
 
-## Step 5 — Access the Admin Interface
+## Clue 2 — Access the Admin Interface
 
 Because this is a non-production interface, it often uses weak or default credentials.
 
