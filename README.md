@@ -1,6 +1,6 @@
 # EXPOSED-ADMIN-CTF-real
 
-# Exploit-Non-Production-Interfaces WALKTHROUGH (use at your own risk)
+# Exploit-Non-Production-Interfaces 
 CAPEC-121
 
 ## Objective
@@ -123,7 +123,7 @@ Okay, you must be desprate...
 <br>
 
 
-
+# Clues (use at your own risk)
 
 ## Clue 1 — Scan for Open Ports Using Nmap
 
