@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "8000:5000"
+
+  admin:
+    build: ./admin
+    ports:
+      - "8080:5001"
